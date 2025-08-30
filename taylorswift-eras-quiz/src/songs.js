@@ -1,6 +1,6 @@
-const albums = [
+const songs = [
   {
-    "album": "Taylor Swift (2006)",
+    "album": "Taylor Swift",
     "tracks": [
       {
         "title": "Tim McGraw",
@@ -67,11 +67,29 @@ const albums = [
         "id": "HLghns7I8FE",
         "start": 30,
         "end": 35
+      },
+      {
+        "title": "I\u2019m Only Me When I\u2019m With You",
+        "id": "h6YoN8bgCPo",
+        "start": 30,
+        "end": 35
+      },
+      {
+        "title": "Invisible",
+        "id": "8OOKMt0Rz1k",
+        "start": 30,
+        "end": 35
+      },
+      {
+        "title": "A Perfectly Good Heart",
+        "id": "vv85ZAvrVDU",
+        "start": 30,
+        "end": 35
       }
     ]
   },
   {
-    "album": "Fearless (2008)",
+    "album": "Fearless",
     "tracks": [
       {
         "title": "Fearless",
@@ -150,11 +168,83 @@ const albums = [
         "id": "jwWR1cQTKyw",
         "start": 30,
         "end": 35
+      },
+      {
+        "title": "Jump Then Fall",
+        "id": "ZuqWijWaEbs",
+        "start": 30,
+        "end": 35
+      },
+      {
+        "title": "Untouchable",
+        "id": "WR6LNojTHG0",
+        "start": 30,
+        "end": 35
+      },
+      {
+        "title": "Come In With the Rain",
+        "id": "_zvBKsihVss",
+        "start": 30,
+        "end": 35
+      },
+      {
+        "title": "Superstar",
+        "id": "drg4aeDsaF4",
+        "start": 30,
+        "end": 35
+      },
+      {
+        "title": "The Other Side of the Door",
+        "id": "425n1NoRtgA",
+        "start": 30,
+        "end": 35
+      },
+      {
+        "title": "Today Was a Fairytale",
+        "id": "rLiXLzd2Ol8",
+        "start": 30,
+        "end": 35
+      },
+      {
+        "title": "You All Over Me",
+        "id": "XKaMUm7YwZc",
+        "start": 30,
+        "end": 35
+      },
+      {
+        "title": "Mr. Perfectly Fine",
+        "id": "4Z2XamJx35M",
+        "start": 30,
+        "end": 35
+      },
+      {
+        "title": "We Were Happy",
+        "id": "seU5y5EgIwk",
+        "start": 30,
+        "end": 35
+      },
+      {
+        "title": "That\u2019s When",
+        "id": "aOa6D6ku3dM",
+        "start": 30,
+        "end": 35
+      },
+      {
+        "title": "Don\u2019t You",
+        "id": "dHdAN4FXzmc",
+        "start": 30,
+        "end": 35
+      },
+      {
+        "title": "Bye Bye Baby",
+        "id": "NgzY9gKljgM",
+        "start": 30,
+        "end": 35
       }
     ]
   },
   {
-    "album": "Speak Now (2010)",
+    "album": "Speak Now",
     "tracks": [
       {
         "title": "Mine",
@@ -239,11 +329,65 @@ const albums = [
         "id": "F5TMU6916U8",
         "start": 30,
         "end": 35
+      },
+      {
+        "title": "Ours",
+        "id": "PH8Uc0Z_KRY",
+        "start": 30,
+        "end": 35
+      },
+      {
+        "title": "If This Was a Movie",
+        "id": "9wZEx9A8p9k",
+        "start": 30,
+        "end": 35
+      },
+      {
+        "title": "Superman",
+        "id": "R9q1HJ3YCjU",
+        "start": 30,
+        "end": 35
+      },
+      {
+        "title": "Electric Touch",
+        "id": "hMPK2vNXr-E",
+        "start": 30,
+        "end": 35
+      },
+      {
+        "title": "When Emma Falls in Love",
+        "id": "IYqgVYjN3Go",
+        "start": 30,
+        "end": 35
+      },
+      {
+        "title": "I Can See You",
+        "id": "jOD86iMAEY0",
+        "start": 30,
+        "end": 35
+      },
+      {
+        "title": "Castles Crumbling",
+        "id": "V80A8qN4fR8",
+        "start": 30,
+        "end": 35
+      },
+      {
+        "title": "Foolish One",
+        "id": "6-x1AlDudZw",
+        "start": 30,
+        "end": 35
+      },
+      {
+        "title": "Timeless",
+        "id": "osmzwWw4RYM",
+        "start": 30,
+        "end": 35
       }
     ]
   },
   {
-    "album": "Red (2012)",
+    "album": "Red",
     "tracks": [
       {
         "title": "State of Grace",
@@ -334,11 +478,83 @@ const albums = [
         "id": "dXNZaHuKWNA",
         "start": 30,
         "end": 35
+      },
+      {
+        "title": "The Moment I Knew",
+        "id": "zZQpz7q9SrU",
+        "start": 30,
+        "end": 35
+      },
+      {
+        "title": "Come Back... Be Here",
+        "id": "Ro-3d59WDQY",
+        "start": 30,
+        "end": 35
+      },
+      {
+        "title": "Girl at Home",
+        "id": "idCv6rTrTqM",
+        "start": 30,
+        "end": 35
+      },
+      {
+        "title": "Ronan",
+        "id": "kdiBc40gW7s",
+        "start": 30,
+        "end": 35
+      },
+      {
+        "title": "Better Man",
+        "id": "PReSQYTFvcs",
+        "start": 30,
+        "end": 35
+      },
+      {
+        "title": "Nothing New",
+        "id": "m3fWCRvz5JA",
+        "start": 30,
+        "end": 35
+      },
+      {
+        "title": "Babe",
+        "id": "3pj39qZZYoQ",
+        "start": 30,
+        "end": 35
+      },
+      {
+        "title": "Message in a Bottle",
+        "id": "cVaG6adE2mA",
+        "start": 30,
+        "end": 35
+      },
+      {
+        "title": "I Bet You Think About Me",
+        "id": "3w0kR1E9F9E",
+        "start": 30,
+        "end": 35
+      },
+      {
+        "title": "Forever Winter",
+        "id": "TkAomsYFsJw",
+        "start": 30,
+        "end": 35
+      },
+      {
+        "title": "Run",
+        "id": "FhPLQVlUiNQ",
+        "start": 30,
+        "end": 35
+      },
+      {
+        "title": "The Very First Night",
+        "id": "rVuyi-dPMIc",
+        "start": 30,
+        "end": 35
       }
     ]
   },
   {
-    "album": "1989 (2014)",
+    "album": "1989",
     "tracks": [
       {
         "title": "Welcome to New York",
@@ -417,11 +633,59 @@ const albums = [
         "id": "GL-HyvAjbFw",
         "start": 30,
         "end": 35
+      },
+      {
+        "title": "Wonderland",
+        "id": "JhICcmiIE80",
+        "start": 30,
+        "end": 35
+      },
+      {
+        "title": "You Are in Love",
+        "id": "M7ySK0keirY",
+        "start": 30,
+        "end": 35
+      },
+      {
+        "title": "New Romantics",
+        "id": "J6oLIWMoeog",
+        "start": 30,
+        "end": 35
+      },
+      {
+        "title": "Slut!",
+        "id": "qrxsceexTBw",
+        "start": 30,
+        "end": 35
+      },
+      {
+        "title": "Say Don\u2019t Go",
+        "id": "C-z-IckrQK8",
+        "start": 30,
+        "end": 35
+      },
+      {
+        "title": "Now That We Don\u2019t Talk",
+        "id": "yF4ulRTCn44",
+        "start": 30,
+        "end": 35
+      },
+      {
+        "title": "Suburban Legends",
+        "id": "ZGBPKYbzSXs",
+        "start": 30,
+        "end": 35
+      },
+      {
+        "title": "Is It Over Now?",
+        "id": "tNxUxm3-658",
+        "start": 30,
+        "end": 35
       }
     ]
   },
   {
-    "album": "Reputation (2017)",
+    "album": "Reputation",
     "tracks": [
       {
         "title": "...Ready for It?",
@@ -484,7 +748,7 @@ const albums = [
         "end": 35
       },
       {
-        "title": "Dancing with Our Hands Tied",
+        "title": "Dancing With Our Hands Tied",
         "id": "erGyUphZSt8",
         "start": 30,
         "end": 35
@@ -516,7 +780,7 @@ const albums = [
     ]
   },
   {
-    "album": "Lover (2019)",
+    "album": "Lover",
     "tracks": [
       {
         "title": "I Forgot That You Existed",
@@ -609,13 +873,13 @@ const albums = [
         "end": 35
       },
       {
-        "title": "Me!",
+        "title": "ME!",
         "id": "S--WI8PUVVo",
         "start": 30,
         "end": 35
       },
       {
-        "title": "It's Nice to Have a Friend",
+        "title": "It\u2019s Nice to Have a Friend",
         "id": "eaP1VswBF28",
         "start": 30,
         "end": 35
@@ -629,296 +893,362 @@ const albums = [
     ]
   },
   {
-    "album": "Folklore (2020)",
+    "album": "Folklore",
     "tracks": [
       {
-        "title": "The 1",
+        "title": "the 1",
         "id": "KsZ6tROaVOQ",
         "start": 30,
         "end": 35
       },
       {
-        "title": "Cardigan",
-        "id": null,
+        "title": "cardigan",
+        "id": "K-a8s8OLBSE",
         "start": 30,
         "end": 35
       },
       {
-        "title": "The Last Great American Dynasty",
-        "id": null,
+        "title": "the last great american dynasty",
+        "id": "2s5xdY6MCeI",
         "start": 30,
         "end": 35
       },
       {
-        "title": "Exile",
-        "id": null,
+        "title": "exile",
+        "id": "osdoLjUNFnA",
         "start": 30,
         "end": 35
       },
       {
-        "title": "My Tears Ricochet",
-        "id": null,
+        "title": "my tears ricochet",
+        "id": "OWbDJFtHl3w",
         "start": 30,
         "end": 35
       },
       {
-        "title": "Mirrorball",
-        "id": null,
+        "title": "mirrorball",
+        "id": "KaM1bCuG4xo",
         "start": 30,
         "end": 35
       },
       {
-        "title": "Seven",
-        "id": null,
+        "title": "seven",
+        "id": "pEY-GPsru_E",
         "start": 30,
         "end": 35
       },
       {
-        "title": "August",
-        "id": null,
+        "title": "august",
+        "id": "nn_0zPAfyo8",
         "start": 30,
         "end": 35
       },
       {
-        "title": "This Is Me Trying",
-        "id": null,
+        "title": "this is me trying",
+        "id": "9bdLTPNrlEg",
         "start": 30,
         "end": 35
       },
       {
-        "title": "Illicit Affairs",
-        "id": null,
+        "title": "illicit affairs",
+        "id": "MLV2SJKWk4M",
         "start": 30,
         "end": 35
       },
       {
-        "title": "Invisible String",
-        "id": null,
+        "title": "invisible string",
+        "id": "OuFnpmGwg5k",
         "start": 30,
         "end": 35
       },
       {
-        "title": "Mad Woman",
-        "id": null,
+        "title": "mad woman",
+        "id": "6DP4q_1EgQQ",
         "start": 30,
         "end": 35
       },
       {
-        "title": "Epiphany",
-        "id": null,
+        "title": "epiphany",
+        "id": "DUnDkI7l9LQ",
         "start": 30,
         "end": 35
       },
       {
-        "title": "Betty",
-        "id": null,
+        "title": "betty",
+        "id": "6TAPqXkZW_I",
         "start": 30,
         "end": 35
       },
       {
-        "title": "Peace",
-        "id": null,
+        "title": "peace",
+        "id": "HpxX4ZE4KWE",
         "start": 30,
         "end": 35
       },
       {
-        "title": "Hoax",
-        "id": null,
+        "title": "hoax",
+        "id": "ryLGxpjwAhM",
+        "start": 30,
+        "end": 35
+      },
+      {
+        "title": "the lakes",
+        "id": "tOHcAc3r2kw",
         "start": 30,
         "end": 35
       }
     ]
   },
   {
-    "album": "Evermore (2020)",
+    "album": "Evermore",
     "tracks": [
       {
-        "title": "Willow",
-        "id": null,
+        "title": "willow",
+        "id": "7EvwIw4gIyk",
         "start": 30,
         "end": 35
       },
       {
-        "title": "Champagne Problems",
-        "id": null,
+        "title": "champagne problems",
+        "id": "wMpqCRF7TKg",
         "start": 30,
         "end": 35
       },
       {
-        "title": "Gold Rush",
-        "id": null,
+        "title": "gold rush",
+        "id": "4WpeIIq_e_Y",
         "start": 30,
         "end": 35
       },
       {
-        "title": "\u2019Tis the Damn Season",
-        "id": null,
+        "title": "\u2019tis the damn season",
+        "id": "WuvhOD-mP8M",
         "start": 30,
         "end": 35
       },
       {
-        "title": "Tolerate It",
-        "id": null,
+        "title": "tolerate it",
+        "id": "_Crn-zgnErk",
         "start": 30,
         "end": 35
       },
       {
-        "title": "No Body, No Crime",
-        "id": null,
+        "title": "no body, no crime",
+        "id": "IEPomqor2A8",
         "start": 30,
         "end": 35
       },
       {
-        "title": "Happiness",
-        "id": null,
+        "title": "happiness",
+        "id": "ero9Xwc5NA0",
         "start": 30,
         "end": 35
       },
       {
-        "title": "Dorothea",
-        "id": null,
+        "title": "dorothea",
+        "id": "zI4DS5GmQWE",
         "start": 30,
         "end": 35
       },
       {
-        "title": "Coney Island",
-        "id": null,
+        "title": "coney island",
+        "id": "c_p_TBaHvos",
         "start": 30,
         "end": 35
       },
       {
-        "title": "Ivy",
-        "id": null,
+        "title": "ivy",
+        "id": "9nIOx-ezlzA",
         "start": 30,
         "end": 35
       },
       {
-        "title": "Cowboy Like Me",
-        "id": null,
+        "title": "cowboy like me",
+        "id": "YPlNBb6I8qU",
         "start": 30,
         "end": 35
       },
       {
-        "title": "Long Story Short",
-        "id": null,
+        "title": "long story short",
+        "id": "rqQHa2HcGtM",
         "start": 30,
         "end": 35
       },
       {
-        "title": "Marjorie",
-        "id": null,
+        "title": "marjorie",
+        "id": "hP6QpMeSG6s",
         "start": 30,
         "end": 35
       },
       {
-        "title": "Closure",
-        "id": null,
+        "title": "closure",
+        "id": "AIFnKqIeEdY",
         "start": 30,
         "end": 35
       },
       {
-        "title": "Evermore",
-        "id": null,
+        "title": "evermore",
+        "id": "EXLgZZE072g",
+        "start": 30,
+        "end": 35
+      },
+      {
+        "title": "right where you left me",
+        "id": "Ur_wAcYDnuA",
+        "start": 30,
+        "end": 35
+      },
+      {
+        "title": "it\u2019s time to go",
+        "id": "1iRbIYkccgw",
         "start": 30,
         "end": 35
       }
     ]
   },
   {
-    "album": "Midnights (2022)",
+    "album": "Midnights",
     "tracks": [
       {
         "title": "Lavender Haze",
-        "id": null,
+        "id": "8asamgeHgw0",
         "start": 30,
         "end": 35
       },
       {
         "title": "Maroon",
-        "id": null,
+        "id": "Qs0Yrzza6ng",
         "start": 30,
         "end": 35
       },
       {
         "title": "Anti-Hero",
-        "id": null,
+        "id": "XqN2qFvY64U",
         "start": 30,
         "end": 35
       },
       {
         "title": "Snow on the Beach",
-        "id": null,
+        "id": "2CnUYMmEHrs",
         "start": 30,
         "end": 35
       },
       {
         "title": "You\u2019re on Your Own, Kid",
-        "id": null,
+        "id": "7Gbg6Z70J7E",
         "start": 30,
         "end": 35
       },
       {
         "title": "Midnight Rain",
-        "id": null,
+        "id": "Odh9ddPUkEY",
         "start": 30,
         "end": 35
       },
       {
         "title": "Question...?",
-        "id": null,
+        "id": "xxrf_QBD5DE",
         "start": 30,
         "end": 35
       },
       {
         "title": "Vigilante Shit",
-        "id": null,
+        "id": "W8XqGHMtUks",
         "start": 30,
         "end": 35
       },
       {
         "title": "Bejeweled",
-        "id": null,
+        "id": "XzKSPRqFg9E",
         "start": 30,
         "end": 35
       },
       {
         "title": "Labyrinth",
-        "id": null,
+        "id": "xTXsKMXUi7w",
         "start": 30,
         "end": 35
       },
       {
         "title": "Karma",
-        "id": null,
+        "id": "pzVYSfzNQ5Y",
         "start": 30,
         "end": 35
       },
       {
         "title": "Sweet Nothing",
-        "id": null,
+        "id": "rn0brgg2BpI",
         "start": 30,
         "end": 35
       },
       {
         "title": "Mastermind",
-        "id": null,
+        "id": "Tmz1lz0zcLQ",
+        "start": 30,
+        "end": 35
+      },
+      {
+        "title": "Hits Different",
+        "id": "_f4yoKJL7IQ",
+        "start": 30,
+        "end": 35
+      },
+      {
+        "title": "The Great War",
+        "id": "iFX6_9h7th0",
+        "start": 30,
+        "end": 35
+      },
+      {
+        "title": "Bigger Than the Whole Sky",
+        "id": "l8Tps3PITx4",
+        "start": 30,
+        "end": 35
+      },
+      {
+        "title": "Paris",
+        "id": "ySZGZrcqvr4",
+        "start": 30,
+        "end": 35
+      },
+      {
+        "title": "High Infidelity",
+        "id": "-qee6dFKlw4",
+        "start": 30,
+        "end": 35
+      },
+      {
+        "title": "Glitch",
+        "id": "Y2a73EvnZ4s",
+        "start": 30,
+        "end": 35
+      },
+      {
+        "title": "Would\u2019ve, Could\u2019ve, Should\u2019ve",
+        "id": "B-MfwP_RmHY",
+        "start": 30,
+        "end": 35
+      },
+      {
+        "title": "Dear Reader",
+        "id": "X0Jti9F-oQA",
         "start": 30,
         "end": 35
       }
     ]
   },
   {
-    "album": "The Tortured Poets Department (2024)",
+    "album": "The Tortured Poets Department",
     "tracks": [
       {
         "title": "Fortnight",
-        "id": null,
+        "id": "b7kmP1fsGg8",
         "start": 30,
         "end": 35
       },
       {
         "title": "The Tortured Poets Department",
-        "id": null,
+        "id": "RQMz4JDbtmI",
         "start": 30,
         "end": 35
       },
@@ -977,13 +1307,13 @@ const albums = [
         "end": 35
       },
       {
-        "title": "Loml",
+        "title": "loml",
         "id": null,
         "start": 30,
         "end": 35
       },
       {
-        "title": "I Can Do It with a Broken Heart",
+        "title": "I Can Do It With a Broken Heart",
         "id": null,
         "start": 30,
         "end": 35
@@ -1005,14 +1335,97 @@ const albums = [
         "id": null,
         "start": 30,
         "end": 35
+      },
+      {
+        "title": "The Black Dog",
+        "id": null,
+        "start": 30,
+        "end": 35
+      },
+      {
+        "title": "imgonnagetyouback",
+        "id": null,
+        "start": 30,
+        "end": 35
+      },
+      {
+        "title": "The Albatross",
+        "id": null,
+        "start": 30,
+        "end": 35
+      },
+      {
+        "title": "Chloe or Sam or Sophia or Marcus",
+        "id": null,
+        "start": 30,
+        "end": 35
+      },
+      {
+        "title": "How Did It End?",
+        "id": null,
+        "start": 30,
+        "end": 35
+      },
+      {
+        "title": "So High School",
+        "id": null,
+        "start": 30,
+        "end": 35
+      },
+      {
+        "title": "I Hate It Here",
+        "id": null,
+        "start": 30,
+        "end": 35
+      },
+      {
+        "title": "thanK you aIMee",
+        "id": null,
+        "start": 30,
+        "end": 35
+      },
+      {
+        "title": "I Look in People\u2019s Windows",
+        "id": null,
+        "start": 30,
+        "end": 35
+      },
+      {
+        "title": "The Prophecy",
+        "id": null,
+        "start": 30,
+        "end": 35
+      },
+      {
+        "title": "Cassandra",
+        "id": null,
+        "start": 30,
+        "end": 35
+      },
+      {
+        "title": "Peter",
+        "id": null,
+        "start": 30,
+        "end": 35
+      },
+      {
+        "title": "The Bolter",
+        "id": null,
+        "start": 30,
+        "end": 35
+      },
+      {
+        "title": "Robin",
+        "id": null,
+        "start": 30,
+        "end": 35
+      },
+      {
+        "title": "The Manuscript",
+        "id": null,
+        "start": 30,
+        "end": 35
       }
     ]
   }
 ];
-
-export const songs = albums.flatMap((a) =>
-  a.tracks.map((t) => ({ ...t, album: a.album }))
-);
-
-// List of album names
-export const albumsList = albums.map((a) => a.album);
