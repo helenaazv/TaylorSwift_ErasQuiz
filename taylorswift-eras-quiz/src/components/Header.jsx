@@ -1,12 +1,23 @@
 export default function Header() {
   return (
-    <header className="fixed top-0 left-0 w-screen flex justify-center items-center bg-white/70 backdrop-blur-md z-50 shadow-md py-4">
+    <header
+      style={{
+        width: "100%",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        paddingTop: "2rem",   
+        paddingBottom: "1.5rem", 
+      }}
+    >
       <img
         src="/title.png"
         alt="Taylor Swift The Eras Song Quiz"
-        className="w-80 md:w-96 mx-auto"
+        style={{
+          width: "26rem",   
+          maxWidth: "90%",
+        }}
       />
     </header>
   );
 }
-

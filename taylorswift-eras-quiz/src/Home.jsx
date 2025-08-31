@@ -1,8 +1,5 @@
 import { useState } from "react";
-import { AnimatePresence } from "framer-motion";
 import Header from "./components/Header";
-import Instructions from "./components/Instructions";
-import StartButton from "./components/StartButton";
 import Eras, { ERAS as eras } from "./components/eras";
 
 export default function Home() {
@@ -14,28 +11,32 @@ export default function Home() {
 
   return (
     <div
-      className="min-h-screen flex flex-col transition-colors duration-500"
-      style={{ backgroundColor: bgColor }}
+      style={{
+        backgroundColor: bgColor,
+        width: "100vw",
+        height: "100vh",
+        display: "flex",
+        flexDirection: "column",
+      }}
     >
+      {/* Top header */}
       <Header />
 
-      <div className="flex flex-col items-center justify-center flex-1 px-4 pt-44">
+      {/* Spacer takes up everything else */}
+      <div style={{ flex: 1 }} />
 
-        {/* Era Selector Component */}
-        <div className="w-full max-w-6xl">
-          <Eras
-            height={400}
-            collapsedWidth={7}
-            hoverBoost={2}
-            imageScale={1.025}
-            hoverScale={1.01}
-            minExpandedWidth={24}
-            transitionDuration={350}
-            onSelect={(eraName) => setSelectedEra(eraName)}
-          />
-        </div>
-
-        
+      {/* Eras bar pinned to bottom */}
+      <div style={{ height: "400px", width: "100%" }}>
+        <Eras
+          height={400}
+          collapsedWidth={7}
+          hoverBoost={2}
+          imageScale={1.025}
+          hoverScale={1.01}
+          minExpandedWidth={24}
+          transitionDuration={350}
+          onSelect={(eraName) => setSelectedEra(eraName)}
+        />
       </div>
     </div>
   );
