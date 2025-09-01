@@ -2,7 +2,7 @@ import requests
 import json
 import time
 
-API_KEY = "AIzaSyCtm2kWB4oEKwGlai--7eG4WMbZSztiszM"
+API_KEY = "YOUR_API_KEY"  # enter your API key
 BASE_URL = "https://www.googleapis.com/youtube/v3/search"
 
 # Load songs.json as JSON

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Header from "./components/Header";
 import Eras, { ERAS as eras } from "./components/eras";
-import StartButton from "./components/StartButton"; // import the button
+import StartButton from "./components/StartButton"; 
 
 export default function Home() {
   const [selectedEra, setSelectedEra] = useState(null);
@@ -21,7 +21,7 @@ export default function Home() {
         height: "100vh",
         display: "flex",
         flexDirection: "column",
-        alignItems: "center", // center header + button horizontally
+        alignItems: "center", 
       }}
     >
       {/* Top header */}
