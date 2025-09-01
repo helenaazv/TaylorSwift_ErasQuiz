@@ -1,17 +1,17 @@
 import { useState } from "react";
 
 export const ERAS = [
-  { name: "Taylor Swift", img: "/TS.png", color: "#a8d5ba" },
-  { name: "Fearless", img: "/Fearless.png", color: "#f9e0a1" },
-  { name: "Speak Now", img: "/Speaknow.png", color: "#d9c2e9" },
-  { name: "Red", img: "/Red.png", color: "#814950" },
-  { name: "1989", img: "/1989.png", color: "#2c5d73" },
-  { name: "Reputation", img: "/Rep.png", color: "#2c2c2c" },
-  { name: "Lover", img: "/Lover.png", color: "#f6bcd8" },
-  { name: "Folklore", img: "/Folklore.png", color: "#d6d6d6" },
-  { name: "Evermore", img: "/evermore.png", color: "#c8a878" },
-  { name: "Midnights", img: "/Midnights.png", color: "#4a5a9c" },
-  { name: "Tortured Poets Department", img: "/TPD.png", color: "#383737ff" },
+  { name: "Taylor Swift", img: "/TS.png", color: "#a8d5ba", btnBg: "#0b7417ff", btnText: "#ffffff" },
+  { name: "Fearless", img: "/Fearless.png", color: "#f9e0a1", btnBg: "#f3960bff", btnText: "#ffffff" },
+  { name: "Speak Now", img: "/Speaknow.png", color: "#d9c2e9", btnBg: "#9b5de5", btnText: "#ffffff" },
+  { name: "Red", img: "/Red.png", color: "#7d3240", btnBg: "#dc3939ff", btnText: "#ffffff" },
+  { name: "1989", img: "/1989.png", color: "#b9e2f0", btnBg: "#257eddff", btnText: "#ffffff" },
+  { name: "Reputation", img: "/Rep.png", color: "#787173", btnBg: "#070707ff", btnText: "#ffffff" },
+  { name: "Lover", img: "/Lover.png", color: "#f6bcd8", btnBg: "#e55dc1ff", btnText: "#ffffff" },
+  { name: "Folklore", img: "/Folklore.png", color: "#d6d6d6", btnBg: "#737373ff", btnText: "#ffffff" },
+  { name: "Evermore", img: "/evermore.png", color: "#d3ad88", btnBg: "#b67642ff", btnText: "#ffffff" },
+  { name: "Midnights", img: "/Midnights.png", color: "#2b324c", btnBg: "#5853e8d4", btnText: "#ffffff" },
+  { name: "Tortured Poets Department", img: "/TPD.png", color: "#383737ff", btnBg: "#000000ff", btnText: "#ffffff" },
 ];
 
 export default function Eras({

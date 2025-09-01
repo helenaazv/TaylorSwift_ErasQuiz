@@ -73,3 +73,29 @@ button:focus-visible {
   outline: none !important;
   box-shadow: none !important;
 }
+
+
+.pixel-btn {
+  font-family: 'Press Start 2P', cursive; /* Retro pixel font */
+  font-size: 20px;
+  padding: 20px 40px;
+  text-transform: uppercase;
+  position: relative;
+  cursor: pointer;
+  image-rendering: pixelated;
+
+  /* remove hard-coded color & border styles */
+  border: none;
+  box-shadow: none;
+
+  /* smooth scaling on hover */
+  transition: transform 0.2s ease;
+}
+
+.pixel-btn:hover {
+  transform: scale(1.05);
+}
+
+.pixel-btn:active {
+  transform: scale(0.95);
+}
