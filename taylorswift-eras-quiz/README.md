@@ -1,12 +1,31 @@
-# React + Vite
+# Taylor Swift Eras Quiz 
+## Work in Progress
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a work-in-progress interactive quiz app inspired by **Taylor Swift's Eras**.  
+The app lets users select an Era, get custom styling for that Era, and (in future versions) play quiz questions or songs directly from YouTube.  
 
-Currently, two official plugins are available:
+<img src="./public/rep_screen.png" alt="Reputation Screen" width="400"/>
+<img src="./public/home_screen.png" alt="Home Screen" width="400"/>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
+## Features (so far)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Interactive Eras Selector**  
+  - Expandable, animated **Eras carousel** with album artwork.
+  - Smooth hover and selection effects (flex-based with scaling animations).
+  - Each Era has its own color theme and button styling.
+
+- **Dynamic Start Button**  
+  - Pixel-style retro button (`Press Start 2P` font).  
+  - Era-specific background and text color.
+  - Animations via **Framer Motion**.
+
+- **Custom Theming**  
+  - Background color of the app changes based on the selected Era.
+  - Button styling is automatically tied to the Era.
+
+- **YouTube Integration (Backend Helper)**  
+  - `youtubeIDs.py` script fetches official audio video IDs from the **YouTube Data API** for each track in a `songs.json`.  
+  - Saves results into `songs_with_ids.json` and a ready-to-use `songs_with_ids.js`.
+
+---
