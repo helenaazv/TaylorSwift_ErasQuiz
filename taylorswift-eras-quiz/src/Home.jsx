@@ -8,7 +8,6 @@ import Instructions from "./components/Instructions";
 export default function Home() {
   const [selectedEra, setSelectedEra] = useState(null);
 
-  // find the full era object when one is selected
   const currentEra = selectedEra
     ? eras.find((era) => era.name === selectedEra)
     : null;
@@ -23,23 +22,20 @@ export default function Home() {
         height: "100vh",
         display: "flex",
         flexDirection: "column",
-        alignItems: "center", 
+        alignItems: "center",
+        transition: "background-color 0.3s ease-in-out",
       }}
     >
-      {/* Top header */}
       <Header />
 
       <Instructions />
 
-      {/* Button under the header, only shows once an era is selected */}
       {currentEra && (
         <StartButton selectedEra={selectedEra} era={currentEra} />
       )}
 
-      {/* Spacer takes up everything else */}
       <div style={{ flex: 1 }} />
 
-      {/* Eras bar pinned to bottom */}
       <div style={{ height: "400px", width: "100%" }}>
         <Eras
           height={400}

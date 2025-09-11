@@ -109,7 +109,6 @@ export default function Quiz() {
         padding: "24px",
       }}
     >
-      {/* Title */}
       <h1
         style={{
           fontSize: "2rem",
@@ -122,7 +121,6 @@ export default function Quiz() {
         GUESS THE SONG!
       </h1>
 
-      {/* Hidden YouTube Player (Audio Only) */}
       <YouTube
         videoId={question.id}
         opts={{
@@ -131,13 +129,12 @@ export default function Quiz() {
           playerVars: {
             autoplay: 1,
             start: question.start,
-            end: question.end,
+            end: question.start + 10,
           },
         }}
         style={{ display: "none" }}
       />
 
-      {/* Answer Options */}
       <div
         style={{
           display: "grid",
