@@ -11,20 +11,20 @@ export const ERAS = [
   { name: "Folklore", img: "/Folklore.png", color: "#d6d6d6", btnBg: "#737373ff", btnText: "#ffffff" },
   { name: "Evermore", img: "/evermore.png", color: "#d3ad88", btnBg: "#b67642ff", btnText: "#ffffff" },
   { name: "Midnights", img: "/Midnights.png", color: "#2b324c", btnBg: "#5853e8d4", btnText: "#ffffff" },
-  { name: "Tortured Poets Department", img: "/TPD.png", color: "#383737ff", btnBg: "#000000ff", btnText: "#ffffff" },
+  { name: "The Tortured Poets Department", img: "/TPD.png", color: "#383737ff", btnBg: "#000000ff", btnText: "#ffffff" },
 ];
 
 export default function Eras({
   items = ERAS,
   initial = null,
   onSelect,
-  height = 300,            // px height of container
-  collapsedWidth = 8,      // % width for non-selected items
-  hoverBoost = 2.5,         // % extra width on hover when no selection
-  imageScale = 1.03,        // scale for selected image
-  hoverScale = 1.015,       // scale on hover (before selection)
-  minExpandedWidth = 20,    // ensure selected item never shrinks too small
-  transitionDuration = 400  // ms for animation
+  height = 300,           
+  collapsedWidth = 8,      
+  hoverBoost = 2.5,         
+  imageScale = 1.03,        
+  hoverScale = 1.015,       
+  minExpandedWidth = 20,    
+  transitionDuration = 400  
 }) {
   const [active, setActive] = useState(initial);
   const [hovered, setHovered] = useState(null);

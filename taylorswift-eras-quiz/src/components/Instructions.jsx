@@ -8,13 +8,19 @@ export default function Instructions() {
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -10 }}
       transition={{ duration: 0.5 }}
-      className="text-center mb-8"
+      className="mb-8"
+      style={{ textAlign: "center" }}
     >
-      <h2 className="text-2xl font-semibold mb-2">Test Your Knowledge!</h2>
-      <p className="text-lg text-gray-800">
-        1. Pick an Era Below <br />
-        2. Listen Closely <br />
-        3. Guess the Song
+      <p
+        className="text-lg"
+        style={{
+          fontFamily: "'Playfair Display', serif",
+          color: "#000000ff",
+          fontSize: "1.5rem",
+          fontWeight: "bold" 
+        }}
+      >
+        Select your favorite era below and put your knowledge to the test
       </p>
     </motion.div>
   );

@@ -1,109 +1,208 @@
-import { useEffect, useState, useRef } from "react";
+import React, { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
+import YouTube from "react-youtube";
+import songs from "./songs";
 
-export default function Quiz({ tracks }) {
-  const [playerReady, setPlayerReady] = useState(false);
+export default function Quiz() {
+  const location = useLocation();
+  const selectedAlbum = location.state?.album || "Taylor Swift";
+
+  const albumData = songs.find((a) => a.album === selectedAlbum);
+
+  const totalSongs = albumData?.tracks.length || 0;
+
+  const [usedTracks, setUsedTracks] = useState([]); 
+  const [question, setQuestion] = useState(null);
+  const [options, setOptions] = useState([]);
   const [score, setScore] = useState(0);
-  const [currentSong, setCurrentSong] = useState(null);
-  const [choices, setChoices] = useState([]);
-  const [question, setQuestion] = useState("");
-  const playerRef = useRef(null);
+  const [answered, setAnswered] = useState(false);
+  const [selected, setSelected] = useState(null);
 
-  // 1. Handle missing data early
-  if (!tracks || tracks.length === 0) {
+  useEffect(() => {
+    if (usedTracks.length < totalSongs) {
+      generateQuestion();
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [usedTracks]);
+
+  const generateQuestion = () => {
+    if (!albumData) return;
+
+    // filter out already used songs
+    const remainingTracks = albumData.tracks.filter(
+      (t) => !usedTracks.includes(t.title)
+    );
+
+    if (remainingTracks.length === 0) return;
+
+    const correctTrack =
+      remainingTracks[Math.floor(Math.random() * remainingTracks.length)];
+
+    let wrongOptions = albumData.tracks
+      .filter((t) => t.title !== correctTrack.title)
+      .sort(() => 0.5 - Math.random())
+      .slice(0, 3);
+
+    const allOptions = [...wrongOptions, correctTrack].sort(
+      () => 0.5 - Math.random()
+    );
+
+    setQuestion(correctTrack);
+    setOptions(allOptions);
+    setAnswered(false);
+    setSelected(null);
+  };
+
+  const handleAnswer = (option) => {
+    if (answered) return;
+    setAnswered(true);
+    setSelected(option.title);
+
+    if (option.title === question.title) {
+      setScore((prev) => prev + 1);
+    }
+
+    setTimeout(() => {
+      setUsedTracks((prev) => [...prev, question.title]); // ✅ mark as used
+    }, 1500);
+  };
+
+  if (!albumData) return <p>No album found...</p>;
+  if (usedTracks.length === totalSongs) {
+    // ✅ end screen
     return (
-      <div className="min-h-screen flex items-center justify-center">
-        <p>No tracks available for this era.</p>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "center",
+          minHeight: "100vh",
+          backgroundColor: "#ec4899",
+          color: "white",
+          padding: "24px",
+        }}
+      >
+        <h1 style={{ fontSize: "2rem", fontWeight: "800", marginBottom: "32px" }}>
+          QUIZ COMPLETE 
+        </h1>
+        <p style={{ fontSize: "20px" }}>
+          Final Score: {score} / {totalSongs}
+        </p>
       </div>
     );
   }
 
-  // 2. Load YouTube API only once
-  useEffect(() => {
-    if (window.YT && window.YT.Player) {
-      // Already loaded
-      createPlayer();
-    } else {
-      const tag = document.createElement("script");
-      tag.src = "https://www.youtube.com/iframe_api";
-      document.body.appendChild(tag);
-      window.onYouTubeIframeAPIReady = createPlayer;
-    }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []); // only run once
-
-  function createPlayer() {
-    playerRef.current = new window.YT.Player("player", {
-      height: "0",
-      width: "0",
-      videoId: tracks[0].id, // initial video
-      playerVars: { autoplay: 0, controls: 0 },
-      events: {
-        onReady: () => setPlayerReady(true),
-      },
-    });
-  }
-
-  // 3. Generate new question whenever player becomes ready
-  useEffect(() => {
-    if (playerReady) {
-      nextQuestion();
-    }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [playerReady]);
-
-  function nextQuestion() {
-    const randomIndex = Math.floor(Math.random() * tracks.length);
-    const song = tracks[randomIndex];
-    setCurrentSong(song);
-
-    if (playerRef.current) {
-      playerRef.current.loadVideoById({
-        videoId: song.id,
-        startSeconds: song.start,
-        endSeconds: song.end,
-      });
-    }
-
-    // Shuffle 4 choices
-    const options = [...tracks.map((s) => s.title)];
-    const shuffled = options.sort(() => 0.5 - Math.random()).slice(0, 4);
-    if (!shuffled.includes(song.title)) {
-      shuffled[Math.floor(Math.random() * 4)] = song.title;
-    }
-    setChoices(shuffled);
-    setQuestion("Which Taylor Swift song is this?");
-  }
-
-  function handleChoice(title) {
-    if (!currentSong) return;
-
-    if (title === currentSong.title) {
-      setScore((prev) => prev + 1);
-      alert("Correct!");
-    } else {
-      alert(`Wrong! The correct answer was "${currentSong.title}"`);
-    }
-    nextQuestion();
-  }
+  if (!question) return <p>Loading quiz...</p>;
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center">
-      <h1 className="text-xl font-bold">{question}</h1>
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        minHeight: "100vh",
+        backgroundColor: "#ec4899",
+        color: "white",
+        padding: "24px",
+      }}
+    >
+      {/* Title */}
+      <h1
+        style={{
+          fontSize: "2rem",
+          fontWeight: "800",
+          marginBottom: "32px",
+          textAlign: "center",
+        }}
+      >
+        GUESS THE SONG!
+      </h1>
 
-      <div className="grid grid-cols-2 gap-4 mt-4">
-        {choices.map((title) => (
-          <button
-            key={title}
-            className="bg-purple-200 px-4 py-2 rounded hover:bg-purple-400 transition"
-            onClick={() => handleChoice(title)}
-          >
-            {title}
-          </button>
-        ))}
+      {/* Hidden YouTube Player (Audio Only) */}
+      <YouTube
+        videoId={question.id}
+        opts={{
+          height: "0",
+          width: "0",
+          playerVars: {
+            autoplay: 1,
+            start: question.start,
+            end: question.end,
+          },
+        }}
+        style={{ display: "none" }}
+      />
+
+      {/* Answer Options */}
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "1fr 1fr",
+          gap: "16px",
+          width: "100%",
+          maxWidth: "700px",
+        }}
+      >
+        {options.map((option, idx) => {
+          let baseStyle = {
+            padding: "20px",
+            borderRadius: "12px",
+            fontSize: "18px",
+            fontWeight: "700",
+            cursor: "pointer",
+            transition: "all 0.3s ease",
+            textAlign: "center",
+          };
+
+          let buttonStyle = {
+            ...baseStyle,
+            backgroundColor: "#db2777",
+            color: "white",
+          };
+
+          if (answered) {
+            if (option.title === question.title) {
+              buttonStyle = {
+                ...baseStyle,
+                backgroundColor: "#22c55e",
+                color: "black",
+                boxShadow: "0 0 15px #22c55e",
+              };
+            } else if (option.title === selected) {
+              buttonStyle = {
+                ...baseStyle,
+                backgroundColor: "#ef4444",
+                color: "white",
+                boxShadow: "0 0 15px #ef4444",
+              };
+            } else {
+              buttonStyle = {
+                ...baseStyle,
+                backgroundColor: "#9d174d",
+                color: "#f3f4f6",
+                opacity: 0.7,
+              };
+            }
+          }
+
+          return (
+            <button
+              key={idx}
+              onClick={() => handleAnswer(option)}
+              style={buttonStyle}
+            >
+              {option.title.toUpperCase()}
+            </button>
+          );
+        })}
       </div>
 
-      <p className="mt-4">Score: {score}</p>
-      <div id="player"></div>
+      {/* Score Display */}
+      <p style={{ marginTop: "24px", fontSize: "14px", color: "#f3f4f6" }}>
+        Score: {score} / {totalSongs}
+      </p>
     </div>
   );
 }

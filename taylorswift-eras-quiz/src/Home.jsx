@@ -2,6 +2,8 @@ import { useState } from "react";
 import Header from "./components/Header";
 import Eras, { ERAS as eras } from "./components/eras";
 import StartButton from "./components/StartButton"; 
+import Instructions from "./components/Instructions";
+
 
 export default function Home() {
   const [selectedEra, setSelectedEra] = useState(null);
@@ -26,6 +28,8 @@ export default function Home() {
     >
       {/* Top header */}
       <Header />
+
+      <Instructions />
 
       {/* Button under the header, only shows once an era is selected */}
       {currentEra && (
