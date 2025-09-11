@@ -6,6 +6,8 @@ import songs from "./songs";
 export default function Quiz() {
   const location = useLocation();
   const selectedAlbum = location.state?.album || "Taylor Swift";
+  const bgColor = location.state?.bgColor || "#f9e0a1"; 
+
 
   const albumData = songs.find((a) => a.album === selectedAlbum);
 
@@ -63,13 +65,12 @@ export default function Quiz() {
     }
 
     setTimeout(() => {
-      setUsedTracks((prev) => [...prev, question.title]); // ✅ mark as used
+      setUsedTracks((prev) => [...prev, question.title]); 
     }, 1500);
   };
 
   if (!albumData) return <p>No album found...</p>;
   if (usedTracks.length === totalSongs) {
-    // ✅ end screen
     return (
       <div
         style={{
@@ -78,7 +79,7 @@ export default function Quiz() {
           alignItems: "center",
           justifyContent: "center",
           minHeight: "100vh",
-          backgroundColor: "#ec4899",
+          backgroundColor: bgColor,
           color: "white",
           padding: "24px",
         }}
@@ -103,7 +104,7 @@ export default function Quiz() {
         alignItems: "center",
         justifyContent: "center",
         minHeight: "100vh",
-        backgroundColor: "#ec4899",
+        backgroundColor: bgColor,
         color: "white",
         padding: "24px",
       }}
@@ -115,6 +116,7 @@ export default function Quiz() {
           fontWeight: "800",
           marginBottom: "32px",
           textAlign: "center",
+          color: "#ec97c8ff"
         }}
       >
         GUESS THE SONG!
@@ -158,7 +160,7 @@ export default function Quiz() {
 
           let buttonStyle = {
             ...baseStyle,
-            backgroundColor: "#db2777",
+            backgroundColor: "#ec97c8ff",
             color: "white",
           };
 
@@ -180,7 +182,7 @@ export default function Quiz() {
             } else {
               buttonStyle = {
                 ...baseStyle,
-                backgroundColor: "#9d174d",
+                backgroundColor: "#ec97c8ff",
                 color: "#f3f4f6",
                 opacity: 0.7,
               };
@@ -200,7 +202,7 @@ export default function Quiz() {
       </div>
 
       {/* Score Display */}
-      <p style={{ marginTop: "24px", fontSize: "14px", color: "#f3f4f6" }}>
+      <p style={{ marginTop: "24px", fontSize: "14px", color: "#ec97c8ff" }}>
         Score: {score} / {totalSongs}
       </p>
     </div>

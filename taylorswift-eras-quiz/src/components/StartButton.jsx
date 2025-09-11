@@ -8,7 +8,7 @@ export default function StartButton({ selectedEra, era }) {
 
   return (
     <motion.button
-      onClick={() => navigate("/quiz", { state: { album: selectedEra } })}
+      onClick={() => navigate("/quiz", { state: { album: selectedEra, bgColor: era.color } })}
       
       
       className="pixel-btn"
