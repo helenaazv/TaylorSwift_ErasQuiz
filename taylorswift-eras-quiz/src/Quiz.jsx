@@ -27,9 +27,18 @@ export default function Quiz() {
     if (usedTracks.length < totalSongs) {
       generateQuestion();
     } else if (usedTracks.length === totalSongs) {
-      // navigate to QuizCompleted page when finished
+      // --- Save best score in localStorage ---
+      const bestScores = JSON.parse(localStorage.getItem("bestScores") || "{}");
+      const currentBest = bestScores[selectedAlbum] || 0;
+
+      if (score > currentBest) {
+        bestScores[selectedAlbum] = score;
+        localStorage.setItem("bestScores", JSON.stringify(bestScores));
+      }
+
+      // --- Navigate to QuizCompleted page when finished ---
       navigate("/quiz-completed", {
-        state: { score, totalSongs, bgColor },
+        state: { score, totalSongs, bgColor, selectedAlbum },
       });
     }
   }, [usedTracks]);
