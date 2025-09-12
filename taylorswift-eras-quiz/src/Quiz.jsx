@@ -1,22 +1,22 @@
+// src/Quiz.jsx
 import React, { useState, useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import YouTube from "react-youtube";
 import songs from "./songs";
 import Guess from "./components/Guess";
 import Color from "color";
 
-
 export default function Quiz() {
   const location = useLocation();
-  const selectedAlbum = location.state?.album || "Taylor Swift";
-  const bgColor = location.state?.bgColor || "#f9e0a1"; 
+  const navigate = useNavigate();
 
+  const selectedAlbum = location.state?.album || "Taylor Swift";
+  const bgColor = location.state?.bgColor || "#f9e0a1";
 
   const albumData = songs.find((a) => a.album === selectedAlbum);
-
   const totalSongs = albumData?.tracks.length || 0;
 
-  const [usedTracks, setUsedTracks] = useState([]); 
+  const [usedTracks, setUsedTracks] = useState([]);
   const [question, setQuestion] = useState(null);
   const [options, setOptions] = useState([]);
   const [score, setScore] = useState(0);
@@ -26,13 +26,17 @@ export default function Quiz() {
   useEffect(() => {
     if (usedTracks.length < totalSongs) {
       generateQuestion();
+    } else if (usedTracks.length === totalSongs) {
+      // navigate to QuizCompleted page when finished
+      navigate("/quiz-completed", {
+        state: { score, totalSongs, bgColor },
+      });
     }
   }, [usedTracks]);
 
   const generateQuestion = () => {
     if (!albumData) return;
 
-    // filter out already used songs
     const remainingTracks = albumData.tracks.filter(
       (t) => !usedTracks.includes(t.title)
     );
@@ -67,35 +71,11 @@ export default function Quiz() {
     }
 
     setTimeout(() => {
-      setUsedTracks((prev) => [...prev, question.title]); 
+      setUsedTracks((prev) => [...prev, question.title]);
     }, 1500);
   };
 
   if (!albumData) return <p>No album found...</p>;
-  if (usedTracks.length === totalSongs) {
-    return (
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          justifyContent: "center",
-          minHeight: "100vh",
-          backgroundColor: bgColor,
-          color: "white",
-          padding: "24px",
-        }}
-      >
-        <h1 style={{ fontSize: "2rem", fontWeight: "800", marginBottom: "32px", color: Color(bgColor).darken(0.5).hex(), }}>
-          QUIZ COMPLETE 
-        </h1>
-        <p style={{ fontSize: "20px", color: Color(bgColor).darken(0.5).hex() }}>
-          Final Score: {score} / {totalSongs}
-        </p>
-      </div>
-    );
-  }
-
   if (!question) return <p>Loading quiz...</p>;
 
   return (
@@ -192,7 +172,14 @@ export default function Quiz() {
       </div>
 
       {/* Score Display */}
-      <p style={{ fontFamily: "'Playfair Display', serif", marginTop: "24px", fontSize: "22px", color: Color(bgColor).darken(0.8).hex(), }}>
+      <p
+        style={{
+          fontFamily: "'Playfair Display', serif",
+          marginTop: "24px",
+          fontSize: "22px",
+          color: Color(bgColor).darken(0.8).hex(),
+        }}
+      >
         Score: {score} / {totalSongs}
       </p>
     </div>

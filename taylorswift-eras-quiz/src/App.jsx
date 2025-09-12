@@ -2,6 +2,8 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./Home";
 import QuizPage from "./Quiz"; 
+import QuizCompleted from "./QuizCompleted"; 
+
 
 export default function App() {
   return (
@@ -9,6 +11,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/quiz" element={<QuizPage />} />
+        <Route path="/quiz-completed" element={<QuizCompleted />} />
       </Routes>
     </Router>
   );
