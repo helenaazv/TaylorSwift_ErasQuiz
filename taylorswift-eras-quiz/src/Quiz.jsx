@@ -2,6 +2,9 @@ import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import YouTube from "react-youtube";
 import songs from "./songs";
+import Guess from "./components/Guess";
+import Color from "color";
+
 
 export default function Quiz() {
   const location = useLocation();
@@ -24,7 +27,6 @@ export default function Quiz() {
     if (usedTracks.length < totalSongs) {
       generateQuestion();
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [usedTracks]);
 
   const generateQuestion = () => {
@@ -84,10 +86,10 @@ export default function Quiz() {
           padding: "24px",
         }}
       >
-        <h1 style={{ fontSize: "2rem", fontWeight: "800", marginBottom: "32px" }}>
+        <h1 style={{ fontSize: "2rem", fontWeight: "800", marginBottom: "32px", color: Color(bgColor).darken(0.5).hex(), }}>
           QUIZ COMPLETE 
         </h1>
-        <p style={{ fontSize: "20px" }}>
+        <p style={{ fontSize: "20px", color: Color(bgColor).darken(0.5).hex() }}>
           Final Score: {score} / {totalSongs}
         </p>
       </div>
@@ -109,17 +111,7 @@ export default function Quiz() {
         padding: "24px",
       }}
     >
-      <h1
-        style={{
-          fontSize: "2rem",
-          fontWeight: "800",
-          marginBottom: "32px",
-          textAlign: "center",
-          color: "#ec97c8ff"
-        }}
-      >
-        GUESS THE SONG!
-      </h1>
+      <Guess />
 
       <YouTube
         videoId={question.id}
@@ -146,18 +138,19 @@ export default function Quiz() {
       >
         {options.map((option, idx) => {
           let baseStyle = {
-            padding: "20px",
+            padding: "45px",
             borderRadius: "12px",
-            fontSize: "18px",
+            fontSize: "23px",
             fontWeight: "700",
             cursor: "pointer",
             transition: "all 0.3s ease",
             textAlign: "center",
+            outline: "none",
           };
 
           let buttonStyle = {
             ...baseStyle,
-            backgroundColor: "#ec97c8ff",
+            backgroundColor: Color(bgColor).darken(0.2).hex(),
             color: "white",
           };
 
@@ -179,7 +172,7 @@ export default function Quiz() {
             } else {
               buttonStyle = {
                 ...baseStyle,
-                backgroundColor: "#ec97c8ff",
+                backgroundColor: Color(bgColor).darken(0.2).hex(),
                 color: "#f3f4f6",
                 opacity: 0.7,
               };
@@ -199,7 +192,7 @@ export default function Quiz() {
       </div>
 
       {/* Score Display */}
-      <p style={{ marginTop: "24px", fontSize: "14px", color: "#ec97c8ff" }}>
+      <p style={{ fontFamily: "'Playfair Display', serif", marginTop: "24px", fontSize: "22px", color: Color(bgColor).darken(0.8).hex(), }}>
         Score: {score} / {totalSongs}
       </p>
     </div>

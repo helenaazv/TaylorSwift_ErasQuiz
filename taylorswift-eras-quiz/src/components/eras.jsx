@@ -10,8 +10,8 @@ export const ERAS = [
   { name: "Lover", img: "/Lover.png", color: "#f6bcd8", btnBg: "#e55dc1ff", btnText: "#ffffff" },
   { name: "Folklore", img: "/Folklore.png", color: "#d6d6d6", btnBg: "#737373ff", btnText: "#ffffff" },
   { name: "Evermore", img: "/evermore.png", color: "#d3ad88", btnBg: "#b67642ff", btnText: "#ffffff" },
-  { name: "Midnights", img: "/Midnights.png", color: "#2b324c", btnBg: "#5853e8d4", btnText: "#ffffff" },
-  { name: "The Tortured Poets Department", img: "/TPD.png", color: "#383737ff", btnBg: "#000000ff", btnText: "#ffffff" },
+  { name: "Midnights", img: "/Midnights.png", color: "#475380ff", btnBg: "#5853e8d4", btnText: "#ffffff" },
+  { name: "The Tortured Poets Department", img: "/TPD.png", color: "#4e4c4cff", btnBg: "#000000ff", btnText: "#ffffff" },
 ];
 
 export default function Eras({
