@@ -12,7 +12,7 @@ export default function Guess() {
       }}
     >
       <img
-        src="/GuessSong.png"
+        src={import.meta.env.BASE_URL + "GuessSong.png"}
         alt="Guess the Song"
         style={{
           width: "27rem",   

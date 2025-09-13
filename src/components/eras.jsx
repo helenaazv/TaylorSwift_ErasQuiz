@@ -2,16 +2,16 @@ import { useState } from "react";
 
 export const ERAS = [
   { name: "Taylor Swift", img: import.meta.env.BASE_URL + "TS.png", color: "#a8d5ba", btnBg: "#0b7417ff", btnText: "#ffffff" },
-  { name: "Fearless", img: "/Fearless.png", color: "#f9e0a1", btnBg: "#f3960bff", btnText: "#ffffff" },
-  { name: "Speak Now", img: "/Speaknow.png", color: "#d9c2e9", btnBg: "#9b5de5", btnText: "#ffffff" },
-  { name: "Red", img: "/Red.png", color: "#7d3240", btnBg: "#dc3939ff", btnText: "#ffffff" },
-  { name: "1989", img: "/1989.png", color: "#b9e2f0", btnBg: "#257eddff", btnText: "#ffffff" },
-  { name: "Reputation", img: "/Rep.png", color: "#787173", btnBg: "#070707ff", btnText: "#ffffff" },
-  { name: "Lover", img: "/Lover.png", color: "#f6bcd8", btnBg: "#e55dc1ff", btnText: "#ffffff" },
-  { name: "Folklore", img: "/Folklore.png", color: "#d6d6d6", btnBg: "#737373ff", btnText: "#ffffff" },
-  { name: "Evermore", img: "/evermore.png", color: "#d3ad88", btnBg: "#b67642ff", btnText: "#ffffff" },
-  { name: "Midnights", img: "/Midnights.png", color: "#475380ff", btnBg: "#5853e8d4", btnText: "#ffffff" },
-  { name: "The Tortured Poets Department", img: "/TPD.png", color: "#4e4c4cff", btnBg: "#000000ff", btnText: "#ffffff" },
+  { name: "Fearless", img: import.meta.env.BASE_URL + "Fearless.png", color: "#f9e0a1", btnBg: "#f3960bff", btnText: "#ffffff" },
+  { name: "Speak Now", img: import.meta.env.BASE_URL + "Speaknow.png", color: "#d9c2e9", btnBg: "#9b5de5", btnText: "#ffffff" },
+  { name: "Red", img: import.meta.env.BASE_URL + "Red.png", color: "#7d3240", btnBg: "#dc3939ff", btnText: "#ffffff" },
+  { name: "1989", img: import.meta.env.BASE_URL + "1989.png", color: "#b9e2f0", btnBg: "#257eddff", btnText: "#ffffff" },
+  { name: "Reputation", img: import.meta.env.BASE_URL + "Rep.png", color: "#787173", btnBg: "#070707ff", btnText: "#ffffff" },
+  { name: "Lover", img: import.meta.env.BASE_URL + "Lover.png", color: "#f6bcd8", btnBg: "#e55dc1ff", btnText: "#ffffff" },
+  { name: "Folklore", img: import.meta.env.BASE_URL + "Folklore.png", color: "#d6d6d6", btnBg: "#737373ff", btnText: "#ffffff" },
+  { name: "Evermore", img: import.meta.env.BASE_URL + "evermore.png", color: "#d3ad88", btnBg: "#b67642ff", btnText: "#ffffff" },
+  { name: "Midnights", img: import.meta.env.BASE_URL + "Midnights.png", color: "#475380ff", btnBg: "#5853e8d4", btnText: "#ffffff" },
+  { name: "The Tortured Poets Department", img: import.meta.env.BASE_URL + "TPD.png", color: "#4e4c4cff", btnBg: "#000000ff", btnText: "#ffffff" },
 ];
 
 export default function Eras({

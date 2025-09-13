@@ -11,7 +11,7 @@ export default function Header() {
       }}
     >
       <img
-        src="/title.png"
+        src={import.meta.env.BASE_URL + "title.png"}
         alt="Taylor Swift The Eras Song Quiz"
         style={{
           width: "30rem",   
