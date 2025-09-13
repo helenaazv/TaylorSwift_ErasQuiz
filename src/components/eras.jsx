@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 export const ERAS = [
-  { name: "Taylor Swift", img: "/TS.png", color: "#a8d5ba", btnBg: "#0b7417ff", btnText: "#ffffff" },
+  { name: "Taylor Swift", img: "TS.png", color: "#a8d5ba", btnBg: "#0b7417ff", btnText: "#ffffff" },
   { name: "Fearless", img: "/Fearless.png", color: "#f9e0a1", btnBg: "#f3960bff", btnText: "#ffffff" },
   { name: "Speak Now", img: "/Speaknow.png", color: "#d9c2e9", btnBg: "#9b5de5", btnText: "#ffffff" },
   { name: "Red", img: "/Red.png", color: "#7d3240", btnBg: "#dc3939ff", btnText: "#ffffff" },
