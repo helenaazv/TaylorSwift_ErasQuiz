@@ -1,4 +1,3 @@
-// src/Quiz.jsx
 import React, { useState, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import YouTube from "react-youtube";
@@ -36,7 +35,6 @@ export default function Quiz() {
         localStorage.setItem("bestScores", JSON.stringify(bestScores));
       }
 
-      // --- Navigate to QuizCompleted page when finished ---
       navigate("/quiz-completed", {
         state: { score, totalSongs, bgColor, selectedAlbum },
       });
@@ -180,7 +178,6 @@ export default function Quiz() {
         })}
       </div>
 
-      {/* Score Display */}
       <p
         style={{
           fontFamily: "'Playfair Display', serif",

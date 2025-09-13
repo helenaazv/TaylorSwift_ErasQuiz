@@ -1,4 +1,3 @@
-// src/components/BestScoresButton.jsx
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import Color from "color";

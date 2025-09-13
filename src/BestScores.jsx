@@ -1,4 +1,3 @@
-// src/BestScores.jsx
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Color from "color";

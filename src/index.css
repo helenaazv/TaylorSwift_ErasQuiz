@@ -42,7 +42,7 @@ h1 {
   line-height: 1.1;
 }
 
-/* 🌟 Default button styling */
+/* Default button styling */
 button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -62,7 +62,7 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-/* 🚫 Reset class for special cases like Eras component */
+/* Reset class for special cases like Eras component */
 .reset-button {
   all: unset;
   display: block;
