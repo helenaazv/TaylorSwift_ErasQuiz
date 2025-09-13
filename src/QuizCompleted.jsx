@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import Color from "color";
 import PlayAgainButton from "./components/PlayAgainButton";
@@ -14,7 +14,8 @@ export default function QuizCompleted() {
     selectedAlbum = "Taylor Swift",
   } = location.state || {};
 
-  //localStorage
+  const [bestScore, setBestScore] = useState(null);
+
   useEffect(() => {
     const storedScores = JSON.parse(localStorage.getItem("bestScores")) || {};
 
@@ -24,9 +25,13 @@ export default function QuizCompleted() {
     if (score > prevBest) {
       storedScores[selectedAlbum] = { score, totalSongs };
       localStorage.setItem("bestScores", JSON.stringify(storedScores));
-    } else if (!storedScores[selectedAlbum]) {
-      storedScores[selectedAlbum] = { score, totalSongs };
-      localStorage.setItem("bestScores", JSON.stringify(storedScores));
+      setBestScore(score); // update state with new best
+    } else {
+      if (!storedScores[selectedAlbum]) {
+        storedScores[selectedAlbum] = { score, totalSongs };
+        localStorage.setItem("bestScores", JSON.stringify(storedScores));
+      }
+      setBestScore(storedScores[selectedAlbum].score);
     }
   }, [score, totalSongs, selectedAlbum]);
 
@@ -57,16 +62,26 @@ export default function QuizCompleted() {
       <p
         style={{
           fontSize: "20px",
-          marginBottom: "15px",
+          marginBottom: "5px",
           color: Color(bgColor).darken(0.5).hex(),
         }}
       >
         Final Score: {score} / {totalSongs}
       </p>
 
-      {/* Buttons */}
+      {bestScore !== null && (
+        <p
+          style={{
+            fontSize: "18px",
+            marginBottom: "15px",
+            color: Color(bgColor).darken(0.5).hex(),
+          }}
+        >
+          Best Score for {selectedAlbum}: {bestScore} / {totalSongs}
+        </p>
+      )}
+
       <PlayAgainButton bgColor={bgColor} />
-       {/* link to best scores page <BestScoresButton bgColor={bgColor} /> */}
     </div>
   );
 }
