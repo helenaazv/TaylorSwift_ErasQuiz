@@ -5,10 +5,9 @@ import QuizPage from "./Quiz";
 import QuizCompleted from "./QuizCompleted"; 
 import BestScores from "./BestScores";
 
-
 export default function App() {
   return (
-    <Router>
+    <Router basename={import.meta.env.BASE_URL}>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/quiz" element={<QuizPage />} />
